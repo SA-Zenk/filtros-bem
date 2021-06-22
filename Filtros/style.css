@@ -1,0 +1,52 @@
+body {
+ position: relative;
+ display: flex;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ padding: 0;
+}
+
+.caja {
+ background-color: #e1e1e1;
+ width: 35%;
+ height: auto;
+}
+.caja__container {
+ width: 100%;
+ height: auto;
+ margin: 0;
+ padding: 0;
+ position: relative;
+}
+
+.caja__container::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ z-index: 2;
+}
+
+.filtro-1::before {
+ background-image: radial-gradient(blue, lightblue);
+ opacity: 0.3;
+}
+
+.filtro-2::before {
+ background-image: radial-gradient(rgb(179, 255, 0), rgb(217, 173, 230));
+ opacity: 0.3;
+}
+
+.filtro-3::before {
+ background-image: radial-gradient(rgb(119, 0, 255), rgb(226, 230, 173));
+ opacity: 0.3;
+}
+
+.caja__imagen {
+ width: 100%;
+ height: auto;
+ z-index: 1;
+}
